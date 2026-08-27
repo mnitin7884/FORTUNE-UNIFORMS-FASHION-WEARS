@@ -1,0 +1,82 @@
+/* Custom Styling for Fortune Uniforms & Fashion Wears */
+:root {
+  --primary-color: #0f3460;
+  --primary-dark: #0a223f;
+  --secondary-color: #e94560;
+  --accent-gold: #d4af37;
+  --light-bg: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--light-bg);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism & Modern Card Shadows */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.product-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #1eb956;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Category Filter Active Pill */
+.filter-btn.active {
+  background-color: #0f3460;
+  color: white;
+  border-color: #0f3460;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

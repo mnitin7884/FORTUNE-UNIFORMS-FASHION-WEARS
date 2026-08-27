@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Catalog | Fortune Uniforms & Fashion Wears</title>
+    <meta name="description" content="Explore our complete range of Custom T-Shirts, Promotional T-Shirts, Security Guard Uniforms, Healthcare Scrubs, Safai Mitra & Corporate Apparel.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-blue-950 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-blue-900">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-boxes-stacked text-amber-400 mr-1.5"></i> OEM & Bulk Orders Available</span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-shirt text-amber-400 mr-1.5"></i> Custom T-Shirts & Screen/DTF Printing</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+919999999999" class="hover:text-amber-400 transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-blue-400"></i> +91-99999 99999
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-nav shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="assets/images/logo.png" alt="Fortune Uniforms Logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.src='assets/images/IMG-20201030-WA0057-removebg-preview.png'">
+                    <div>
+                        <span class="text-xl font-bold tracking-tight text-blue-950 block leading-tight">FORTUNE</span>
+                        <span class="text-xs font-semibold tracking-wider text-amber-600 block uppercase">Uniforms & Fashion Wears</span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-700">
+                    <a href="index.html" class="hover:text-blue-900 transition-colors">Home</a>
+                    <a href="products.html" class="text-blue-900 font-semibold hover:text-amber-600 transition-colors">Products & Catalog</a>
+                    <a href="about.html" class="hover:text-blue-900 transition-colors">About Us</a>
+                    <a href="contact.html" class="hover:text-blue-900 transition-colors">Contact</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-blue-900 hover:bg-blue-950 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-md transition-all">
+                        <span>Get Quote</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100" aria-label="Open navigation menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="index.html" class="block py-2 text-slate-700 hover:text-blue-900 border-b border-slate-100 font-medium">Home</a>
+            <a href="products.html" class="block py-2 text-blue-900 font-bold border-b border-slate-100">Products & Catalog</a>
+            <a href="about.html" class="block py-2 text-slate-700 hover:text-blue-900 border-b border-slate-100 font-medium">About Us</a>
+            <a href="contact.html" class="block py-2 text-slate-700 hover:text-blue-900 border-b border-slate-100 font-medium">Contact & Enquiry</a>
+        </div>
+    </header>
+
+    <!-- Page Header Banner -->
+    <div class="bg-gradient-to-r from-blue-950 to-slate-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center space-y-3">
+            <h1 class="text-3xl sm:text-4xl font-extrabold">Product Catalog & Categories</h1>
+            <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">Explore our high-quality institutional garments, security wear, custom t-shirts, and hospital apparel.</p>
+        </div>
+    </div>
+
+    <!-- Category Filter Controls -->
+    <section class="py-8 bg-white border-b border-slate-200 sticky top-20 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                <button data-filter="all" class="filter-btn active px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 transition-all whitespace-nowrap">
+                    All Products
+                </button>
+                <button data-filter="tshirts" class="filter-btn bg-white text-slate-700 px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 hover:border-blue-900 transition-all whitespace-nowrap">
+                    👕 T-Shirts & Promotional
+                </button>
+                <button data-filter="security" class="filter-btn bg-white text-slate-700 px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 hover:border-blue-900 transition-all whitespace-nowrap">
+                    🛡️ Security Guard Uniforms
+                </button>
+                <button data-filter="healthcare" class="filter-btn bg-white text-slate-700 px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 hover:border-blue-900 transition-all whitespace-nowrap">
+                    🏥 Healthcare & Hospital
+                </button>
+                <button data-filter="sanitation" class="filter-btn bg-white text-slate-700 px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 hover:border-blue-900 transition-all whitespace-nowrap">
+                    🧹 Safai Mitra & Sanitation
+                </button>
+                <button data-filter="corporate" class="filter-btn bg-white text-slate-700 px-5 py-2 rounded-full text-sm font-semibold border border-slate-300 hover:border-blue-900 transition-all whitespace-nowrap">
+                    🏢 Corporate & Industrial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- Product A: Corporate Polo T-Shirt -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="tshirts">
+                    <div class="h-60 overflow-hidden bg-gradient-to-tr from-blue-950 to-indigo-900 relative flex items-center justify-center p-6 text-white text-center">
+                        <div class="space-y-2">
+                            <i class="fa-solid fa-shirt text-5xl text-amber-400"></i>
+                            <h4 class="font-bold text-lg">Premium Polo T-Shirt</h4>
+                            <p class="text-xs text-blue-200">220-240 GSM Matty Fabric</p>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-amber-500 text-blue-950 text-[11px] font-bold px-2.5 py-0.5 rounded-full">T-Shirts</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Corporate Polo Collar T-Shirt</h3>
+                            <p class="text-xs text-slate-500 mt-1">High-grade honeycomb matty polo t-shirts with customized company logo embroidery & tipping collar.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Bio-Washed</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">15+ Colors</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Corporate Polo Collar T-Shirt" data-category="T-Shirts" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product B: Promotional / Event T-Shirt -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="tshirts">
+                    <div class="h-60 overflow-hidden bg-gradient-to-tr from-slate-900 to-blue-900 relative flex items-center justify-center p-6 text-white text-center">
+                        <div class="space-y-2">
+                            <i class="fa-solid fa-bullhorn text-5xl text-yellow-300"></i>
+                            <h4 class="font-bold text-lg">Promotional Round Neck</h4>
+                            <p class="text-xs text-slate-300">Bulk Campaign & Event Wear</p>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-amber-500 text-blue-950 text-[11px] font-bold px-2.5 py-0.5 rounded-full">Promotional</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Promotional & Campaign T-Shirt</h3>
+                            <p class="text-xs text-slate-500 mt-1">Cost-effective round neck polyester/cotton t-shirts with full-coverage Screen/DTF printing for marketing events.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">High-Def Printing</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">160-180 GSM</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Promotional & Campaign T-Shirt" data-category="Promotional T-Shirts" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product C: Security Guard Uniform Set -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="security">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/product-jpeg.jpg" alt="Security Guard Uniform" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Security</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Security Guard Uniform Set</h3>
+                            <p class="text-xs text-slate-500 mt-1">Heavy-duty security shirt and cargo trouser combo with epaulettes, pocket flaps, and lanyard attachments.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Navy / Khaki / Black</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Tear Resistant</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Security Guard Uniform Set" data-category="Security" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product D: Security Guard Winter Jacket / Blazer -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="security">
+                    <div class="h-60 overflow-hidden bg-gradient-to-tr from-slate-800 to-slate-950 relative flex items-center justify-center p-6 text-white text-center">
+                        <div class="space-y-2">
+                            <i class="fa-solid fa-shield-halved text-5xl text-amber-400"></i>
+                            <h4 class="font-bold text-lg">Security Winter Jacket</h4>
+                            <p class="text-xs text-slate-300">Windproof & Warm Padding</p>
+                        </div>
+                        <span class="absolute top-3 right-3 bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Security</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Security Guard Jacket / Overcoat</h3>
+                            <p class="text-xs text-slate-500 mt-1">Insulated, weatherproof security patrol jacket with reflective tape and badge patch slots.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Thermal Lining</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Water Repellent</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Security Guard Jacket / Overcoat" data-category="Security" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 1: OT Scrub Suit -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/ot-scrub-suit-1.jpg" alt="OT Scrub Suit" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">OT Scrub Suit (Unisex)</h3>
+                            <p class="text-xs text-slate-500 mt-1">High-breathability, wrinkle-resistant surgical scrub set with ergonomic pockets.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Sizes: S - 3XL</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Multiple Colors</span>
+                            </div>
+                        </div>
+                        <button data-product-name="OT Scrub Suit (Unisex)" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Medical Doctor Apron -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/medical-apron.jpg" alt="Medical Doctor Apron" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Medical Doctor Apron</h3>
+                            <p class="text-xs text-slate-500 mt-1">Premium white lab coat / doctor apron with reinforced stitching and stain resistance.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Half / Full Sleeve</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Cotton Poly Blend</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Medical Doctor Apron" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Nursing Staff Uniform -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/half-sleeve-nursing-staff-dress.jpg" alt="Nursing Staff Dress" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Nursing Staff Uniform</h3>
+                            <p class="text-xs text-slate-500 mt-1">Elegant and comfortable nurse tunic and trousers for clinical & hospital shifts.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Anti-Bacterial</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Color-Fast</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Nursing Staff Uniform" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: Patient Gown -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/hospital-patient-gown.jpg" alt="Hospital Patient Gown" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Hospital Patient Gown</h3>
+                            <p class="text-xs text-slate-500 mt-1">Soft, skin-friendly tie-back patient gowns designed for comfort during hospital stays.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Free Size</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Printed / Solid</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Hospital Patient Gown" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Hospital Ward Boy Uniform -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/hospital-ward-boys-uniform.jpg" alt="Hospital Ward Boy Uniform" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Hospital Ward Boy Uniform</h3>
+                            <p class="text-xs text-slate-500 mt-1">Heavy-duty shirt & trouser uniform set for hospital support and ward staff.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Durable Fabric</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Easy Wash</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Hospital Ward Boy Uniform" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Safai Mitra Sanitation Uniform -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="sanitation">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/Safai Mitra Uniform_25850899862_product-jpeg.jpg" alt="Safai Mitra Uniform" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-amber-600 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Sanitation</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Safai Mitra Uniform</h3>
+                            <p class="text-xs text-slate-500 mt-1">Reflective strip sanitation workwear for Municipal Corporations & Waste Management staff.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">High Visibility</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Heavy Duty</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Safai Mitra Sanitation Uniform" data-category="Sanitation" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7: Green Hospital Staff Uniform -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="healthcare">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/Green Hospital Staff Uniform_22774474197_medical-apron.jpg" alt="Green Hospital Staff Uniform" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-blue-900 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Healthcare</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Green Hospital Staff Apron</h3>
+                            <p class="text-xs text-slate-500 mt-1">Specialized clinical green uniform for lab technicians and nursing staff.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Medical Grade</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Stain Free</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Green Hospital Staff Apron" data-category="Healthcare" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8: Corporate Staff & Office Attire -->
+                <div class="product-item product-card bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between shadow-sm" data-category="corporate">
+                    <div class="h-60 overflow-hidden bg-slate-100 relative">
+                        <img src="assets/images/product-jpeg-4.jpg" alt="Corporate Staff Uniform" class="w-full h-full object-cover">
+                        <span class="absolute top-3 right-3 bg-slate-800 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full">Corporate</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-blue-950">Corporate Executive Shirts</h3>
+                            <p class="text-xs text-slate-500 mt-1">Formal office shirts and trousers with fine thread count and custom company logo embroidery.</p>
+                            <div class="mt-3 flex flex-wrap gap-1.5 text-[11px] text-slate-600 font-medium">
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Custom Embroidery</span>
+                                <span class="bg-slate-100 px-2 py-0.5 rounded">Premium Cotton</span>
+                            </div>
+                        </div>
+                        <button data-product-name="Corporate Executive Shirts" data-category="Corporate" class="whatsapp-inquire-btn w-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Inquire / Bulk Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="Logo" class="h-10 w-auto bg-white/10 rounded p-1">
+                    <span class="text-lg font-bold text-white tracking-wide">FORTUNE UNIFORMS</span>
+                </div>
+                <p class="text-xs leading-relaxed text-slate-400">
+                    Trusted OEM manufacturer & wholesale supplier of uniforms, security wear, custom T-shirts & fashion wears.
+                </p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider">Quick Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-amber-400 transition-colors">Home</a></li>
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Product Catalog</a></li>
+                    <li><a href="about.html" class="hover:text-amber-400 transition-colors">About Company</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-400 transition-colors">Contact & Location</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider">Top Categories</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Polo & Round Neck T-Shirts</a></li>
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Promotional & Campaign Wears</a></li>
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Security Guard Uniforms</a></li>
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Doctor Aprons & Scrub Suits</a></li>
+                    <li><a href="products.html" class="hover:text-amber-400 transition-colors">Safai Mitra Sanitation Suits</a></li>
+                </ul>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-sm font-semibold text-white uppercase tracking-wider">Reach Out</h4>
+                <div class="space-y-2 text-xs">
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-400"></i> +91-99999 99999</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-envelope text-amber-400"></i> info@fortuneuniforms.com</p>
+                    <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400"></i> India</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-6 text-center text-xs text-slate-500">
+            <p>&copy; 2026 Fortune Uniforms & Fashion Wears. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/919999999999?text=Hello%20Fortune%20Uniforms!%20I%20have%20an%20enquiry%20regarding%20products." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

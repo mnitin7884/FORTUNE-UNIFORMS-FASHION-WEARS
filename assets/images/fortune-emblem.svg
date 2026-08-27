@@ -1,0 +1,44 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="topWaveGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="35%" stop-color="#00A2FF" />
+      <stop offset="100%" stop-color="#005BDB" />
+    </linearGradient>
+
+    <linearGradient id="midWaveGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#00A2FF" />
+      <stop offset="45%" stop-color="#005BDB" />
+      <stop offset="100%" stop-color="#0C369C" />
+    </linearGradient>
+
+    <linearGradient id="botWaveGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0066E6" />
+      <stop offset="50%" stop-color="#0D3599" />
+      <stop offset="100%" stop-color="#05194D" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- Top Layer Wave -->
+    <path d="M 300 230 
+             C 410 110, 610 80, 810 160 
+             C 700 195, 560 185, 460 225 
+             C 380 255, 335 245, 300 230 Z" 
+          fill="url(#topWaveGrad)" />
+
+    <!-- Middle Layer Wave -->
+    <path d="M 230 300 
+             C 360 190, 580 160, 840 240 
+             C 710 280, 550 265, 420 310 
+             C 320 345, 265 325, 230 300 Z" 
+          fill="url(#midWaveGrad)" />
+
+    <!-- Bottom Layer Wave -->
+    <path d="M 170 380 
+             C 310 270, 530 240, 870 320 
+             C 720 375, 520 365, 370 405 
+             C 250 435, 195 410, 170 380 Z" 
+          fill="url(#botWaveGrad)" />
+  </g>
+</svg>
